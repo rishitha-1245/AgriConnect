@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Orders">
+        <template if:true={orders}>
+            <ul>
+                <template for:each={orders} for:item="order">
+                    <li key={order.Id}>
+                        {order.Name} - {order.Order_ID_c__c} - {order.Order_Status_c__c} - 
+                        {order.Payment_Status_c__c} - {order.Price_c__c} - {order.Quantity__c} - 
+                        {order.Total_Amount_c__c} - {order.Buyer_c__c}
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+    </lightning-card>
+</template>

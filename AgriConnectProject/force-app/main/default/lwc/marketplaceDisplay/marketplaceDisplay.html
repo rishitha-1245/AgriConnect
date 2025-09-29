@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Marketplace Items">
+        <template if:true={items}>
+            <ul>
+                <template for:each={items} for:item="item">
+                    <li key={item.Id}>
+                        {item.Name} - {item.Price__c} - {item.Quantity__c} - {item.Status_c__c}
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+    </lightning-card>
+</template>

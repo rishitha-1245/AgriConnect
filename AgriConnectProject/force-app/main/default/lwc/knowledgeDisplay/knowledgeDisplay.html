@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Knowledge Articles">
+        <template if:true={knowledgeList}>
+            <ul>
+                <template for:each={knowledgeList} for:item="article">
+                    <li key={article.Id}>
+                        {article.Name} - {article.Title__c} - {article.Content__c}
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+    </lightning-card>
+</template>

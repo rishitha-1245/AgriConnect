@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Consultations">
+        <template if:true={consultations}>
+            <ul>
+                <template for:each={consultations} for:item="con">
+                    <li key={con.Id}>
+                        {con.Name} - {con.Consultation_Topic__c} - {con.Consultation_DateTime_c__c} - 
+                        {con.Expert_c__c} - {con.Farmer_c__c} - {con.Status_c__c}
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+    </lightning-card>
+</template>

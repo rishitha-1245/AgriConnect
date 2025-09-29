@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Crop Listings">
+        <template if:true={cropListings}>
+            <ul>
+                <template for:each={cropListings} for:item="crop">
+                    <li key={crop.Id}>{crop.Name} - {crop.Type__c} - {crop.Quantity__c}</li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+    </lightning-card>
+</template>

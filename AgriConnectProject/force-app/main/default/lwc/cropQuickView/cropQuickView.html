@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Quick Crop View">
+        <template if:true={crops}>
+            <ul>
+                <template for:each={crops} for:item="crop">
+                    <li key={crop.Id}>{crop.Name} - {crop.Type__c} - {crop.Quantity__c}</li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+    </lightning-card>
+</template>

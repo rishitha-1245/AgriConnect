@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Farmer Crops">
+        <template if:true={farmerCrops}>
+            <ul>
+                <template for:each={farmerCrops} for:item="crop">
+                    <li key={crop.Id}>
+                        {crop.Name} - Crop Listing: {crop.Crop_Listing__c} - Farmer: {crop.Farmer__c} - 
+                        Area Planted: {crop.Area_Planted_c__c} - Season: {crop.Season_c__c}
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+    </lightning-card>
+</template>
