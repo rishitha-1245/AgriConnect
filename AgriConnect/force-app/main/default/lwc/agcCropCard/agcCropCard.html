@@ -1,0 +1,9 @@
+<template>
+  <lightning-card>
+    <div class="slds-p-around_small">
+      <p class="slds-text-heading_small">{crop.Name}</p>
+      <p>{crop.Crop__c} — {crop.Quantity__c} QTY — ₹{crop.Price__c}</p>
+      <lightning-button label="View" onclick={onView} variant="brand" class="slds-m-top_small"></lightning-button>
+    </div>
+  </lightning-card>
+</template>

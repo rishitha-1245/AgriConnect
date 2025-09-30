@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Farmer Information" icon-name="standard:contact">
+        <div class="slds-var-m-around_medium">
+            <p if:true={farmerName}>
+                <strong>Name:</strong> {farmerName}
+            </p>
+
+            <p if:true={showPhone}>
+                <strong>Phone:</strong>
+                <a href={farmerPhoneLink}>{farmerPhone}</a>
+            </p>
+
+            <p if:true={errorMessage} class="slds-text-color_error">
+                Error: {errorMessage}
+            </p>
+
+            <lightning-button 
+                label="View Farmer Record" 
+                onclick={openFarmerRecord} 
+                class="slds-m-top_small">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

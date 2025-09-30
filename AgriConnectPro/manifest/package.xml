@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <members>CropListing__c</members>
+    <members>Orders__c</members>
+    <members>Farmers__c</members>
+    <members>Marketplace__c</members>
+    <members>Consultation__c</members>
+    <members>Knowledge__c</members>
+    <name>CustomObject</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>ApexClass</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>LightningComponentBundle</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>Flow</name>
+  </types>
+  <version>58.0</version>
+</Package>

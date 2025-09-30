@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Quick Create Crop">
+    <div class="slds-p-around_small">
+      <lightning-input label="Name" name="name" value={name} onchange={handleInput}></lightning-input>
+      <lightning-input label="Crop" name="crop" value={crop} onchange={handleInput}></lightning-input>
+      <lightning-input type="number" label="Quantity" name="quantity" value={quantity} onchange={handleInput}></lightning-input>
+      <lightning-input type="number" label="Price" name="price" value={price} onchange={handleInput}></lightning-input>
+      <div class="slds-m-top_small">
+        <lightning-button label="Save" onclick={handleSave} variant="brand"></lightning-button>
+      </div>
+    </div>
+  </lightning-card>
+</template>

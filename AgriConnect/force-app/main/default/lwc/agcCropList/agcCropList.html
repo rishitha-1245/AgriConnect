@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Crop Listings">
+    <template if:true={crops}>
+      <div class="slds-grid slds-wrap">
+        <template for:each={crops} for:item="crop">
+          <div key={crop.Id} class="slds-col slds-size_1-of-1 slds-p-around_xx-small">
+            <c-agc-crop-card crop={crop} oncropselect={handleCropSelect}></c-agc-crop-card>
+          </div>
+        </template>
+      </div>
+    </template>
+    <template if:true={error}>
+      <div class="slds-text-color_error slds-p-around_small">{errorMessage}</div>
+    </template>
+  </lightning-card>
+</template>

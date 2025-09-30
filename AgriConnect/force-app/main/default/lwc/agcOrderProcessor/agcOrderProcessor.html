@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title="Order Processor">
+    <div class="slds-p-around_small">
+      <p>Order Record Id: {recordId}</p>
+      <p>Use the buttons to process this order.</p>
+      <div class="slds-m-top_small">
+        <lightning-button label="Approve" onclick={handleApprove} variant="brand"></lightning-button>
+        <lightning-button label="Cancel" onclick={handleCancel} variant="destructive" class="slds-m-left_small"></lightning-button>
+      </div>
+    </div>
+  </lightning-card>
+</template>
